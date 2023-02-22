@@ -97,9 +97,11 @@ ul, ol {
 nav ul li a {
     padding: 20px;
     text-transform: uppercase;
-   
 }   
 
+a {
+    color: #695BA0;
+}
 
 
 a:link {
