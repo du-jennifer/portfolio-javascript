@@ -1,0 +1,50 @@
+main section{
+    padding-bottom: 2rem;
+}
+details {
+    padding-bottom: 0.5em;
+}
+details p {
+    padding-bottom: 1em;
+} 
+
+@media (max-width: 945px) {
+    * {
+        font-size: 1.5vh;
+    }
+    p {
+        font-size: 1.7vh;
+    }
+    h2 a{
+        font-size: 2.2vh;
+        font-size: 1.7vw;
+    }
+    details summary{
+        font-size: 1.8vh;
+    }
+    footer a {
+        font-size: 1.7vh;
+    }
+}
+@media (max-width: 625px) {
+    * {
+        font-size: 1.1vh;
+    }
+    p {
+        font-size: 1.5vh;
+    }
+    h2 a{
+        font-size: 1.7vh;
+        font-size: 1.7vw;
+    }
+    details summary{
+        font-size: 1.4vh;
+    }
+    footer a {
+        font-size: 1.5vh;
+    }
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

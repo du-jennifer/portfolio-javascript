@@ -1,0 +1,156 @@
+.content{
+    display:grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap:1em;
+    text-align: center;
+    place-items: center;
+    
+}
+
+.content>#intro{
+    grid-column: 1 / span 2;
+    width: 50ch;
+}
+
+.content>aside{
+    grid-column: 3 / span 1;
+}
+
+
+.content>#snippet{
+
+    grid-column: 1 / span 1;
+
+}
+.content>p{
+    grid-column: 2 / span 2;
+    
+}
+.content>#internship{
+    width: 50ch;
+    grid-column: 1 / span 2;
+
+}
+.content>figure{
+    grid-column: 3 / span 1;
+    
+}
+
+.content>#fact{
+    padding-top: 40px;
+    grid-column: 1 / span 3;
+}
+
+#fact>*{
+    padding: 10px;
+}
+
+img {
+    border: solid #E6E6FA 10px;
+}
+
+video {
+    border: solid #E6E6FA 10px;
+}
+@media (max-width: 1100px) {
+    p {
+        font-size: 14px;
+    }
+    img, video{
+        width: 320px;
+        height: 320px;
+    }
+    .content>#intro{
+        width: 40ch;
+    }
+    .content>#internship{
+        width: 40ch;
+    }
+    footer a{
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 945px) {
+    img, video{
+        width: 70%;
+        height: 70%;
+    }
+
+    .content{
+        grid-template-columns: 1fr; 
+        grid-row-gap: 20px;
+    }
+    .content>#intro{
+        grid-column: 1 / span 1;
+       
+    }
+    .content>aside{
+        grid-column: 1 / span 1;
+    }
+    .content>p{
+        grid-column: 1 / span 1;
+        visibility: hidden;
+
+    }
+    .content>p:after{
+        visibility: visible;
+        content: "That's me!";
+        display:block;
+        margin:auto;
+    }
+    .content>#snippet{
+        grid-column: 1 / span 1;
+    }
+    
+    .content>#internship{
+        grid-column: 1 / span 1;
+    }
+    .content>figure{
+        grid-column: 1 / span 1;
+    }
+    .content>#fact{
+        padding-top: 15px;
+        grid-column: 1 / span 1;
+    }
+    #fact p {
+        width: 65ch;
+    }
+}
+@media (max-width: 600px) {
+    * {
+        font-size: 1.1vh;
+    }
+    p {
+        font-size: 1.5vh;
+    }
+    footer a{
+        font-size: 1.5vh;
+    }
+}
+
+@media (max-width: 500px) {
+    * {
+        font-size: 1vh;
+    }
+    main {
+        margin: 0;
+    }
+    #fact p {
+        width: 40ch;
+    }
+    img, video{
+        width: 60%;
+        height: 60%;
+    }
+    audio {
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 300px) {
+    * {
+        font-size: 0.8vh;
+    }
+}

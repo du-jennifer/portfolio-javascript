@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Jennifer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Karla:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/sunflower.ico">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <div class="layout">
+    <header>
+        <nav>
+        <section id="toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="eds124br.html">Teaching</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </section>
+        </nav>
+    </header>
+    
+    <main>
+        <h1> Contact Me </h1>
+        <div id="contacts">
+        <section id="emailcontact">
+            <h2> Email </h2>
+            <ol>
+                <li>School: jhd002@ucsd.edu</li>
+                <li>Personal: du.jenniferl@gmail.com</li>
+            </ol>
+        </section>
+        <section id="linkedcontact">
+            <h2> LinkedIn </h2>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/jennifer-du-a23b6a165/">https://www.linkedin.com/in/jennifer-du-a23b6a165/</a>
+                </li>
+            </ul>
+        </section>
+        <section id="githubcontact">
+            <h2> GitHub </h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/du-jennifer">https://github.com/du-jennifer</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+        <section id="prompt">
+            <form> 
+                <h3> Leave your contact information below! </h3>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="firstname">First name:</label>
+                    <input type="text" id="firstname" name="firstname"> 
+                    <br><br>
+                    <label for="lastname">Last name:</label>
+                    <input type="text" id="lastname" name="lastname"> 
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <br><br>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <br><br>
+                    <label for="linkedinurl">LinkedIn:</label>
+                    <input type="url" id="linkedinurl" name="linkedinurl">
+                    <br><br>
+                    <label for="facebookurl">Facebook:</label>
+                    <input type="url" id="facebookurl" name="facebookurl">
+                    <br><br>
+                    <label for="preferred">Choose preferred contact:</label>
+                    <select id="preferred">
+                        <optgroup label="Verbal">
+                            <option value="phone">Phone</option>
+                        </optgroup>
+                        <optgroup label="Written">
+                            <option value="email">Email</option>
+                        </optgroup>
+                        <optgroup label="Social Networking">
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="facebook">Facebook</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>How did you find me?</legend>
+                    <label for="method">Please choose from list or specify if none apply:</label>
+                    <input list="methods" name="method" id="method">
+                    <datalist id="methods">
+                        <option value="In-person">
+                        <option value="LinkedIn">
+                        <option value="GitHub">
+                        <option value="Resume">
+                        <option value="Other">
+                    </datalist>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Leave me a note or any comments! </legend>
+                    <textarea rows="5" cols="50"></textarea>
+                </fieldset>
+
+                <br>
+                <button type="submit"> Submit </button>
+            </form>
+        <section id="happy">
+            <section id="happyface">
+        <h3> Leave with a happy face </h3>
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-.045 17.51h-.015c-2.285 0-4.469-1.189-6.153-3.349l.789-.614c1.489 1.911 3.394 2.963 5.364 2.963h.013c1.987-.004 3.907-1.078 5.408-3.021l.791.611c-1.693 2.194-3.894 3.405-6.197 3.41zm-3.468-10.01c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm7.013 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/></svg>
+        
+        <button type="button">Hover Smile Then Click Me!</button>
+        <template>
+            <p> Have a good day ^-^ </p>
+            <img src="images/cat.jpeg" alt="Happy Cat" width="450" height="450">
+        </template>
+        </section>
+    </section>
+    </main>
+    <footer>
+        <hr>
+        <p> Thank you for checking my website out! </p>
+    </footer>
+    </div>
+</body>
+</html>
