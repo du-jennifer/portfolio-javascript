@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer's JS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Karla:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/sunflower.ico">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+</head>
+<body>
+
+    <button id="alertB" type="button">Alert</button>
+    <button id="confirmB" type="button">Confirm</button>
+    <button id ="promptB" type="button">Prompt</button>
+    <output id="outputText"></output>
+
+    
+    <dialog id="alertD"> 
+        <form>
+            <p> Alert Pressed!</p>
+            <button value="submit">OK</button>
+        </form>
+    </dialog>
+    <dialog id="confirmD"> 
+        <form method="dialog">
+            <p> Do you confirm this?</p>
+            <button value="submit">OK</button>
+            <button value="cancel">Cancel</button>
+        </form>
+    </dialog>
+    <dialog id="promptD"> 
+        <form method="dialog">
+            <p> What is your name?</p>
+            <input type="text" id="inName">
+            <button value="submit">OK</button>
+            <button value="cancel">Cancel</button>
+        </form>
+    </dialog>
+    <script type="module" src="customdialog.js"> 
+    
+        // import {customdialog} from './customdialog.js';
+     </script>
+</body>
+</html>
