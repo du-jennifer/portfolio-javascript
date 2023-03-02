@@ -74,6 +74,13 @@ h3 {
     grid-row-end: 3;
 }
 
+#happyface>div{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display:none;
+    padding-top: 20px;
+}
+
 svg {
   transition: transform 3s;
 }
@@ -125,6 +132,14 @@ button:hover {
     #happyface {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+    #cat>p{
+        font-size: 12px;
     }
       
       
@@ -179,9 +194,21 @@ button:hover {
     fieldset {
         width: 800px;
     }
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+    #cat>p{
+        font-size: 16px;
+    }
+    
 }
 @media (max-width: 945px) {
     * {
+        font-size: 1.3vh;
+    }
+    #cat>p{
         font-size: 1.3vh;
     }
 
@@ -208,6 +235,10 @@ button:hover {
         display: block;
         margin: auto;
 
+    }
+    img {
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -293,6 +324,9 @@ button:hover {
     p {
         font-size: 1.5vh;
     }
+    #cat>p{
+        font-size: 1.1vh;
+    }
 
     fieldset {
         width: 400px;
@@ -341,6 +375,9 @@ button:hover {
     * {
         font-size: 0.9vh;
     }
+    #cat>p{
+        font-size: 0.9vh;
+    }
     textarea {
         width: 40ch;
     }
@@ -353,6 +390,9 @@ button:hover {
 
 @media (max-width: 300px) {
     * {
+        font-size: 0.8vh;
+    }
+    #cat>p{
         font-size: 0.8vh;
     }
     fieldset {
