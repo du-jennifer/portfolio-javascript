@@ -1,7 +1,7 @@
 let addButton = document.getElementById('addB');
 let addDialog = document.getElementById('addD');
 let outputT = document.getElementById('outputText');
-var row = null;
+let row = null;
 document.onload=displayData();
 addButton.addEventListener('click',() => {
     addDialog.showModal();
@@ -107,11 +107,11 @@ function editPost(cellVal) {
     addDialog.showModal();
     outputT.innerHTML = "shownt";
     row = cellVal.parentElement.parentElement; // tr
-    document.getElementById("postTitle").value = row.cells[0].innerHTML;
+  /*  document.getElementById("postTitle").value = row.cells[0].innerHTML;
     document.getElementById("postDate").value = row.cells[1].innerHTML;
-    document.getElementById("postSummary").value = row.cells[2].innerHTML;
+    document.getElementById("postSummary").value = row.cells[2].innerHTML; */
 
-    // edit in storage
+    // get in storage
     var postList = getPostList();
     document.getElementById("postTitle").value = postList[row.rowIndex-1].postTitle;
     document.getElementById("postDate").value = postList[row.rowIndex-1].postDate;
@@ -120,15 +120,15 @@ function editPost(cellVal) {
 }
 
 function removePost(cellVal){
-    // delete post on table
     row = cellVal.parentElement.parentElement; // tr
-    document.getElementById("postList").deleteRow(row.rowIndex);
-    
 
     // delete from storage
     var postList = getPostList();
     postList.splice(row.rowIndex-1, 1);
     localStorage.setItem("postList", JSON.stringify(postList));
+
+    // delete post on table
+    document.getElementById("postList").deleteRow(row.rowIndex);
 
     row = null;
 
