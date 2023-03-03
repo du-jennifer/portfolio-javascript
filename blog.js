@@ -2,6 +2,7 @@ let addButton = document.getElementById('addB');
 let addDialog = document.getElementById('addD');
 let outputT = document.getElementById('outputText');
 let row = null;
+let editTrue = false;
 document.onload=displayData();
 addButton.addEventListener('click',() => {
     addDialog.showModal();
@@ -46,12 +47,16 @@ addDialog.addEventListener('close',() => {
             outputT.innerHTML = "Post Updated!";
         }
 
-        // reset values!!
-        document.getElementById('postTitle').value = "";
-        document.getElementById('postDate').value ="";
-        document.getElementById('postSummary').value= "";
+       
 
+    } else {
+        row = null;
     }
+    
+     // reset values!!
+     document.getElementById('postTitle').value = "";
+     document.getElementById('postDate').value ="";
+     document.getElementById('postSummary').value= "";
 });
 
 function displayData(){
@@ -99,9 +104,9 @@ function updatePost() {
 
 function editPost(cellVal) {
     // edit post on table
-    addDialog.showModal();
+    
     row = cellVal.parentElement.parentElement; // tr
-  /*  document.getElementById("postTitle").value = row.cells[0].innerHTML;
+/*  document.getElementById("postTitle").value = row.cells[0].innerHTML;
     document.getElementById("postDate").value = row.cells[1].innerHTML;
     document.getElementById("postSummary").value = row.cells[2].innerHTML; */
 
@@ -111,6 +116,7 @@ function editPost(cellVal) {
     document.getElementById("postDate").value = postList[row.rowIndex-1].postDate;
     document.getElementById("postSummary").value = postList[row.rowIndex-1].postSummary;
 
+    addDialog.showModal();
 }
 
 function removePost(cellVal){
