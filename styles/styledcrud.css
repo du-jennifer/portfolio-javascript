@@ -5,12 +5,14 @@ dialog {
 }
 .dialogbutton {
     display: inline-block;
-    margin-left: 4px;
-    margin-right: 4px;
 }
 .dialogbuttons {
     width:100%;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #confirmP {
     text-align: center;
