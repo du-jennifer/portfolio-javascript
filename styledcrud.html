@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jennifer's Resume</title>
+    <title>Jennifer's Styled Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Karla:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/sunflower.ico">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/resume.css">
+    <link rel="stylesheet" href="styles/styledcrud.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+    <script src="https://kit.fontawesome.com/af94c70e8e.js" crossorigin="anonymous"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T9WLW6T5H"></script>
@@ -28,7 +30,6 @@
                 <span></span>
                 <span></span>
                 <ul>
-                    <li><a href="hw4.html">HW4</a></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -41,26 +42,45 @@
             </nav>
         </header>
     <main>
-        <h1> Resume </h1>
-            <picture>
-                <media source="(max-width: 945px)" srcset="images/resume.jpeg" alt="Resume JPEG" width="1000"></media>
-                <img src="images/resume.png" alt="Resume PNG" width="1000">
-            </picture>
-        <br><br>
-<!--       <canvas id="txtCanvas"></canvas>
-        <script>
-            var c = document.getElementById("txtCanvas");
-            var ctx = c.getContext("2d"); 
-            ctx.font = "24px Arial";
-            ctx.strokeText("Please save my resume :D", 0, 110);
-        </script>
---> 
+        <h1> Blog </h1>
+
+        
+
+        <dialog id="addD"> 
+            <form method="dialog">
+                <label for="postTitle"> Post Title:</label>
+                <input type="text" name="postTitle" id="postTitle">
+                <br><br>
+                <label for="postDate"> Post Date:</label>
+                <input type="date" name="postDate" id="postDate">
+                <br><br>
+                <p> Post Summary:</p>
+                <textarea id="postSummary" rows="3" cols="35"></textarea>
+                <br><br>
+                <button value="submit">Save</button>
+                <button value="cancel">Cancel</button>
+            </form>
+        </dialog>
+
+        <table id="postList">
+            <tr>
+                <th> Post Title </th>
+                <th> Post Date </th>
+                <th> Post Summary </th>
+            </tr>
+        </table>
+        <button id="addB" type="button">Post</button>
+        <output id="outputText"></output>
+        <!-- <script type="module" src="blog.js"></script> -->
+        <script src="blog.js"></script>
+        
     </main>
+
     <footer>
         <hr>
         <p> Thank you for checking my website out! Feel free to contact me below! </p>
         <a href="contact.html">Contact Me</a>
     </footer>
-    </div>
+</div>
 </body>
 </html>

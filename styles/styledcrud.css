@@ -1,0 +1,141 @@
+dialog {
+    margin: auto;
+    padding: 15px;
+}
+#outputText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+button i {
+    padding-left: 2px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    /*text-align: center;*/
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+}
+
+td {
+    max-width: 80ch;
+    word-wrap: break-word;
+}
+
+button {
+    display: block;
+    border: solid #695BA0 1px; 
+    border-radius: 25px;
+    padding: 3px 5px;
+    background-color: #695BA0;
+    color: white;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    
+}
+button:hover {
+    /*background-color: rgba(105, 91, 160, 0.7);*/
+    background-color: rgba(105, 91, 160, 0.2);
+    color: #695BA0;
+}
+
+#addB {
+    display: block;
+    border: solid #695BA0 1px; 
+    border-radius: 25px;
+    padding: 10px 25px;
+    background-color: white;
+    color: #695BA0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#addB:hover {
+    background-color: rgba(105, 91, 160, 0.2);
+}
+
+@media (max-width: 1200px) {
+    td {
+        max-width: 55ch;
+    }
+}
+
+@media (max-width: 945px) {
+    td {
+        max-width: 45ch;
+    }
+}
+
+@media (max-width: 800px) {
+    td {
+        max-width: 30ch;
+    }
+    * {
+        font-size: 1.8vh;
+    }
+    button {
+        padding: 2px 4px;
+        width: 70px;
+    }
+    #addB {
+        padding: 6px 10px;
+    }
+    
+}
+
+@media (max-width: 625px) {
+    td {
+        max-width: 22ch;
+    }
+    * {
+        font-size: 1.5vh;
+    }
+    button {
+        padding: 2px 4px;
+        width: 60px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    td {
+        max-width: 15ch;
+    }
+    * {
+        font-size: 1.1vh;
+    }
+    button {
+        padding: 1px 3px;
+        width: 50px;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    td {
+        max-width: 15ch;
+    }
+    * {
+        font-size: 0.9vh;
+    }
+    button {
+        padding: 1px 3px;
+        width: 45px;
+    }
+    
+}
+
+

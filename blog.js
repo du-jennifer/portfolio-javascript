@@ -26,7 +26,6 @@ addDialog.addEventListener('close',() => {
         var postData = [postTitle, postDate,postSummary];     
 
         if (row ==null){
-//            addNewPost(postData);
 
             // save post into localStorage
             var postList = getPostList();
@@ -41,18 +40,16 @@ addDialog.addEventListener('close',() => {
             // add new data to table 
             addNewPostToTable(postData);
 
-
-            outputT.innerHTML = "insert";
+            outputT.innerHTML = "New Post Added!";
         } else {
             updatePost();
-            outputT.innerHTML = "update";
+            outputT.innerHTML = "Post Updated!";
         }
 
-        /*
-            document.getElementById('postTitle').value = "";
-            document.getElementById('postDate').value ="";
-            document.getElementById('postSummary').value= "";
-*/
+        // reset values!!
+        document.getElementById('postTitle').value = "";
+        document.getElementById('postDate').value ="";
+        document.getElementById('postSummary').value= "";
 
     }
 });
@@ -68,7 +65,6 @@ function displayData(){
 
 function addNewPostToTable(postData){
     // create post on table
-    console.log("added");
     var newPost = postList.insertRow();
     var cell1 = newPost.insertCell(0);
     var cell2 = newPost.insertCell(1);
@@ -77,15 +73,16 @@ function addNewPostToTable(postData){
     cell1.innerHTML = postData[0];
     cell2.innerHTML = postData[1];
     cell3.innerHTML = postData[2];
-    newPost.insertCell(3).innerHTML = `<button onclick = editPost(this)>Edit</button>
-    <button onclick = removePost(this)>Delete</button>`;
-    outputT.innerHTML = "inside";
-    console.log("adde2");
+    newPost.insertCell(3).innerHTML = `<button onclick = editPost(this)>Edit
+    <i class="fa-solid fa-pen"></i>
+    </button>
+    <button onclick = removePost(this)>Delete
+    <i class="fa-solid fa-trash-can"></i>
+    </button>`;
 }
 
 function updatePost() {
     // update post on table
-    console.log("upadred");
     row.cells[0].innerHTML = document.getElementById("postTitle").value;
     row.cells[1].innerHTML = document.getElementById("postDate").value;
     row.cells[2].innerHTML = document.getElementById("postSummary").value;
@@ -102,10 +99,7 @@ function updatePost() {
 
 function editPost(cellVal) {
     // edit post on table
-    console.log("pressed");
-    outputT.innerHTML = "shownfirst";
     addDialog.showModal();
-    outputT.innerHTML = "shownt";
     row = cellVal.parentElement.parentElement; // tr
   /*  document.getElementById("postTitle").value = row.cells[0].innerHTML;
     document.getElementById("postDate").value = row.cells[1].innerHTML;
@@ -132,6 +126,7 @@ function removePost(cellVal){
 
     row = null;
 
+    outputT.innerHTML = "Post Deleted!";
 }
 
 function getPostList(){

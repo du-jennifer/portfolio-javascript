@@ -1,0 +1,22 @@
+#buttons a{
+    border: solid #695BA0 1px; 
+    border-radius: 30px;
+    padding: 12px 20px;
+    margin: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#buttons a:hover{
+    background-color: rgba(105, 91, 160, 0.2);
+    text-decoration: none;
+}
+#buttons {
+    padding: 10px;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
