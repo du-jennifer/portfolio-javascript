@@ -8,8 +8,11 @@ dialog {
     margin-left: 4px;
     margin-right: 4px;
 }
-#dialogbuttons {
+.dialogbuttons {
     width:100%;
+    text-align: center;
+}
+#confirmP {
     text-align: center;
 }
 #outputText {

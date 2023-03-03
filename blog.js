@@ -1,6 +1,7 @@
 let addButton = document.getElementById('addB');
 let addDialog = document.getElementById('addD');
 let outputT = document.getElementById('outputText');
+let confirmDialog = document.getElementById('confirmD');
 let row = null;
 let editTrue = false;
 document.onload=displayData();
@@ -119,21 +120,30 @@ function editPost(cellVal) {
     addDialog.showModal();
 }
 
+
+let cell;
 function removePost(cellVal){
-    row = cellVal.parentElement.parentElement; // tr
-
-    // delete from storage
-    var postList = getPostList();
-    postList.splice(row.rowIndex-1, 1);
-    localStorage.setItem("postList", JSON.stringify(postList));
-
-    // delete post on table
-    document.getElementById("postList").deleteRow(row.rowIndex);
-
-    row = null;
-
-    outputT.innerHTML = "Post Deleted!";
+    cell = cellVal;
+    confirmDialog.showModal();
 }
+
+confirmDialog.addEventListener('close',() => {
+    if (confirmDialog.returnValue == "submit"){
+        row = cell.parentElement.parentElement; // tr
+
+        // delete from storage
+        var postList = getPostList();
+        postList.splice(row.rowIndex-1, 1);
+        localStorage.setItem("postList", JSON.stringify(postList));
+
+        // delete post on table
+        document.getElementById("postList").deleteRow(row.rowIndex);
+
+        row = null;
+
+        outputT.innerHTML = "Post Deleted!";
+    }
+});
 
 function getPostList(){
     var postList;
